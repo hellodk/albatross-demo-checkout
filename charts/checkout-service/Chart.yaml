@@ -1,0 +1,6 @@
+apiVersion: v2
+name: checkout-service
+description: Helm chart for checkout-service (APP-CHECKOUT-004) managed by Albatross
+type: application
+version: 2.1.0
+appVersion: "2.1.0"

@@ -1,0 +1,23 @@
+{{- if .Values.networkPolicy.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ .Release.Name }}-netpol
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+    albatross.io/appid: {{ .Values.appid | quote }}
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: {{ .Chart.Name }}
+      albatross.io/appid: {{ .Values.appid | quote }}
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - ipBlock:
+            cidr: {{ .Values.networkPolicy.ingressCIDR }}
+      ports:
+        - protocol: TCP
+          port: {{ .Values.service.port }}
+{{- end }}

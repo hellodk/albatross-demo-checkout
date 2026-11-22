@@ -1,0 +1,11 @@
+environment: dr-hyderabad
+replicaCount: 2
+image:
+  repository: ghcr.io/hellodk/checkout-service
+  tag: v2.1.0
+service:
+  type: ClusterIP
+  port: 8080
+networkPolicy:
+  enabled: false
+  ingressCIDR: 10.20.0.0/16

@@ -1,0 +1,12 @@
+environments:
+  staging: {}
+  prod-mumbai: {}
+  dr-hyderabad: {}
+
+releases:
+  - name: checkout-service
+    namespace: albatross-workloads
+    chart: ./charts/checkout-service
+    values:
+      - ./charts/checkout-service/values.yaml
+      - ./charts/checkout-service/values-prod.yaml

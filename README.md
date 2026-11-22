@@ -1,6 +1,6 @@
 # checkout-service (`APP-CHECKOUT-004`)
 
-Sample application repository formatted for **Albatross** automatic Git onboarding via [`garuda.env`](garuda.env).
+Sample application repository formatted for **Albatross** automatic Git onboarding via [`albatross.env`](albatross.env).
 
 ## Push to GitHub
 
@@ -13,4 +13,4 @@ git push -u origin main
 
 1. Open **Plugins & App Onboarding** in Albatross UI.
 2. Enter Git Repository: `https://github.com/hellodk/albatross-demo-checkout.git` (plus PAT if private).
-3. Click **Fetch garuda.env & Auto-Fill**, review the fields, and click **Confirm & Onboard Application**.
+3. Click **Fetch albatross.env & Auto-Fill**, review the fields, and click **Confirm & Onboard Application**.
